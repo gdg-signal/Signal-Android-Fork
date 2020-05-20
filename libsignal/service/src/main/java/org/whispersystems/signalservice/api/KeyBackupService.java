@@ -167,6 +167,7 @@ public final class KeyBackupService {
                                   : token;
 
         Log.i(TAG, "Restore " + status.getStatus());
+        Log.i(TAG, String.format(Locale.US,"Restore OK! data: %s tries: %d", Hex.toStringCondensed(status.getData().toByteArray()), status.getTries()));
         switch (status.getStatus()) {
           case OK:
             KbsData kbsData = hashedPin.decryptKbsDataIVCipherText(status.getData().toByteArray());

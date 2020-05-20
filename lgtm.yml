@@ -1,0 +1,5 @@
+extraction:
+    java:
+      index:
+        build_command: ./gradlew clean assemblePlayRelease --exclude-task signProductionPlayRelease
+    
